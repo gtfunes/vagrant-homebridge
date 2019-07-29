@@ -1,7 +1,7 @@
 version: '3.4'
 services:
   homebridge:
-    image: gtfunes/homebridge:latest
+    image: oznu/homebridge:latest
     restart: always
     network_mode: host
     volumes:
