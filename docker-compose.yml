@@ -1,0 +1,14 @@
+version: '3.4'
+services:
+  homebridge:
+    image: gtfunes/homebridge:latest
+    restart: always
+    network_mode: host
+    volumes:
+      - ./volumes/homebridge:/homebridge
+    environment:
+      - TZ=${TZ}
+      - PGID=${PGID}
+      - PUID=${PUID}
+      - HOMEBRIDGE_CONFIG_UI=1
+      - HOMEBRIDGE_CONFIG_UI_PORT=80
